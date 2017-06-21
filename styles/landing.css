@@ -1,0 +1,156 @@
+*:focus {
+    outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding: 20px 0 20px 0;
+}
+
+.navbar-nav {
+   margin: 0 auto;
+   text-align: center;
+}
+
+.nav-item {
+    font-size: 0.85em;
+    color: rgb(153, 153, 159);
+}
+
+.nav-item-active {
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+}
+
+.nav-item:focus {
+    color: rgb(66, 66, 66);
+}
+
+.menu-toggle {
+    font-size: 1.5em;
+}
+
+.hero {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding: 150px 0 150px 0;
+    background: transparent;
+}
+
+.hero h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#name {
+    font-size: 1.65em;
+    font-weight: bold;
+}
+
+.job-title {
+    margin: 30px auto;
+    padding: 15px;
+    color: white;
+    background: rgb(54, 149, 253);
+    width: fit-content;
+}
+
+.about-me-wrapper {
+    background: rgb(248, 248, 248);
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/footer_lodyas.png");
+    transform:skew(0deg,10deg);
+        -ms-transform:skew(0deg,10deg);
+        -webkit-transform:skew(0deg,5deg);
+}
+
+.about-me {
+    padding: 50px 0 50px 0;
+    transform:skew(0deg,-5deg);
+        -ms-transform:skew(0deg,-10deg);
+        -webkit-transform:skew(0deg,-5deg); 
+}
+
+.about-me-content {
+    text-align: center;
+    color: rgb(220, 220, 220);
+}
+
+.about-me-content p {
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
+#headshot {
+    width: 300px;
+    height: 300px;
+}
+
+.devicons {
+    font-size: 4.6em;
+    text-align: center;
+    color: rgb(220, 220, 220);
+}
+
+.projects-title {
+    margin: 75px 0 75px 0;
+}
+
+.single-project {
+    margin-bottom: 75px;
+}
+
+.single-project-content {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.center-block {
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+@media (min-width: 768px) { 
+    .nav-item {
+        margin-right: 50px;
+    }
+
+    .devicons {
+        font-size: 8.5em;
+    }
+
+    .about-me-content {
+        text-align: left;
+        color: rgb(220, 220, 220);
+    }
+
+    .single-project-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) { 
+    .devicons {
+        font-size: 10em;
+    }
+
+    #name {
+        font-size: 1.65em;
+    }
+
+    .about-me-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: rgb(220, 220, 220);
+    }
+}

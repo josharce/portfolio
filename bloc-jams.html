@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Josh Arce - Web Developer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="styles/studies.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-toggleable-sm">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars menu-toggle" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link nav-item-active" href="index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <h1>BLOC JAMS<span id="name"></span></h1>
+      <div class="job-title">
+        <h1>DEEP(ish) DIVE</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid about-me-wrapper" id="about-me">
+    <div class="container about-me">
+      <div class="row">
+        <div class="col">
+          <div class="about-me-content">
+              <h2>Bloc Jams is a digital music player, much like Spotify or Amazon Music.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-img-top">
+          <img src="assets/images/blocjams/landing.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>WHAT IS IT?</h3>
+          <p>
+            This project was a part of the curriculum at Bloc in front-end web development.
+            Bloc Jams was built twice to experiment with technology usability and to facilitate the understanding of front-end web technologies. The first iteration of this project was built solely using HTML and CSS for the layout and responsiveness, with
+            Javascript and jQuery implementing user-interactivity.
+          </p>
+          <p>
+            The second version was built using AngularJS in contrast. The views that are loaded are still built with HTML and CSS for 
+            layout and responsiveness, but user interactive and dynamic information are handled using Javascript and Angular directives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>UNDER THE HOOD AND NOTABLE</h3>
+          <img src="assets/images/blocjams/collection.png" class="img-fluid">
+          <p>
+            When the collection page is loaded, the view is populated with albums available to listen to. For the sake of this project,
+            the album information is stored inside a static fixtures file. The information contained within this file is JSON data. As 
+            seen in the demo, the first version of this project requests the first item in the JSON object and repeats the information 
+            by appending an album "template" using a for loop. The AngularJS version of Bloc Jams works similarly, however, the template 
+            is repeated using the ng-repeat directive.
+          </p>
+          <p>
+            It is worth noting, that this system of displaying the albums in the collection view could be modified to query a server side
+            database of albums as well. Using the same for-loop or ng-repeat directive implemented in this example, the new album data can 
+            be used instead seamlessly.
+          </p>
+          <br />
+          <img src="assets/images/blocjams/album.png" class="img-fluid">
+          <p>
+            The individual album view utilizes a similar method in the track listing. The individual song names and associated information
+            reside in the album JSON object as well. When the page is loaded, the template for the individual songs are loaded using a for-loop
+            that iterates based on the number of songs on the album. In similar fashion to the collection page, the AngularJS version of Bloc Jams
+            uses the ng-repeat directive to display the individual tracks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>THE ANGULAR WAY</h3>
+          <p>
+            Throughout the development of Bloc Jams, the benefits of AngularJS became most apparent when working with the track listing
+            on the individual album page. This presented itself as the most complex behavior implemented in Bloc Jams.
+          </p>
+          <p>
+            The behavior of the individual tracks needed to be as follows:
+            <ol>
+              <li>When the user clicks a song to play it, the song number should change to a pause button.</li>
+              <li>When the mouse leaves the table row of the currently playing song, the pause button should remain.</li>
+              <li>When the user switches songs, the previously playing song's table cell should revert the content back to the song number.</li>
+              <li>When the user hovers over each of the songs that aren't playing, the play button should still appear; however, the application shouldn't show the play button when the user hovers over the playing song.</li>
+            </ol>
+          </p>
+          <p>
+            The code below illustrates how this is accomplished in the first version of Bloc Jams. Please note that for the sake
+            of brevity, the event listener that binds the click handler to the mouse events has been omitted. This includes the events
+            mouseover, mouseleave and click.
+          </p>
+          <p>
+            <script src="https://gist.github.com/josharce/8623af6aea70db615397b3507fbe98af.js"></script>
+          </p>
+          <br />
+          <p>
+            The AngularJS implementation is starkly different. The logic of the user interactivity can be controlled almost entirely using
+            built-in Angular directives. Furthermore, by using directives, the resulting code that implements this logic is mostly
+            written using HTML. The following code snippet illustrates this:
+          </p>
+          <p>
+            <script src="https://gist.github.com/josharce/4003811c9850b49e6971d6c4df0aa604.js"></script>
+          </p>
+          <p>
+            While the variable 'playing' resides in the corresponding controller, every other bit of logic is built right into this table. 
+            AngularJS' built-in directives ng-mouseover and ng-mouseleave allow the logic for events, with variable value manipulation,
+            to be built directly into the HTML.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>THE TAKE AWAY</h3>
+          <p>
+            I began this project with assumptions that proved ill-got or misguided.
+          </p>
+          <p>
+            Having used jQuery to varying small degrees, I thought using it would result in the easiest implementations of the 
+            features I needed. I grossly underestimated the power of AngularJS. As I began to utilize more of the framework's 
+            built-in functionality, I was shocked at the ease of functionality implementation. AngularJS proved to be every bit as 
+            powerful as I have understood it to be, and it made refactoring Bloc Jams an exciting undertaking in learning a new 
+            web technology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="scripts/parallax.js"></script>
+</body>
+</html>
