@@ -21,7 +21,7 @@
         <a class="nav-item nav-link nav-item-active" href="http://www.josharce.io">Home</a>
         <a class="nav-item nav-link" href="#projects">Projects</a>
         <a class="nav-item nav-link" href="#posts">Recent Posts</a>
-        <a class="nav-item nav-link" href="#">Contact</a>
+        <a class="nav-item nav-link" href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -109,6 +109,38 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container contact-me" id="contact">
+    <div class="row justify-content-center contact-me-title">
+      <h2>CONTACT ME</h2>
+    </div>
+    <form id="contact-form" action="https://getsimpleform.com/messages?form_api_token=20e204cd7de61ada319e2b151c673d93" method="post">
+      <input type='hidden' name='redirect_to' value='http://www.josharce.io/thank-you.html'/>
+      <div class="form-group row justify-content-center">
+        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-6">
+          <input name="name" type="name" class="form-control" id="inputName" placeholder="Name" required>
+        </div>
+      </div>
+      <div class="form-group row justify-content-center">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-6">
+          <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="form-group row justify-content-center">
+        <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
+        <div class="col-sm-6">
+          <textarea name="message" class="form-control" rows="5" id="inputMessage" required></textarea>
+        </div>
+      </div>
+      <div class="form-group row justify-content-center">
+        <div class="offset-sm-4 col">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </form>
   </div>
   
   <script

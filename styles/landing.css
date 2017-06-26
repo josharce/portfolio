@@ -135,6 +135,20 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
+.contact-me {
+    margin-top: 75px;
+}
+
+.contact-me-title {
+    margin-bottom: 50px;
+}
+
+#form-back-button {
+    color: rgb(240, 240, 240);
+    background: transparent;
+    border: none;
+}
+
 .center-block {
    margin-left:auto;
    margin-right:auto;
