@@ -108,6 +108,33 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.posts-wrapper {
+    margin-top: 140px;
+    background: rgb(248, 248, 248);
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/use_your_illusion.png");
+    transform:skew(0deg,-10deg);
+        -ms-transform:skew(0deg,-10deg);
+        -webkit-transform:skew(0deg,-5deg);
+}
+
+.posts {
+    color: rgb(220, 220, 220);
+    text-align: center;
+    padding: 125px 0 75px 0;
+    transform:skew(0deg,5deg);
+        -ms-transform:skew(0deg,10deg);
+        -webkit-transform:skew(0deg,5deg); 
+}
+
+.posts h2 {
+    margin-bottom: 50px;
+}
+
+.single-post {
+    margin-bottom: 75px;
+    text-align: left;
+}
+
 .center-block {
    margin-left:auto;
    margin-right:auto;
