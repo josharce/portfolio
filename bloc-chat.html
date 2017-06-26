@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Josh Arce - Web Developer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="styles/studies.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-toggleable-sm">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars menu-toggle" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link nav-item-active" href="http://www.josharce.io">Home</a>
+        <a class="nav-item nav-link" href="http://www.josharce.io/#projects">Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <h1>BLOC CHAT<span id="name"></span></h1>
+      <div class="job-title">
+        <h1>DEEP(ish) DIVE</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid about-me-wrapper" id="about-me">
+    <div class="container about-me">
+      <div class="row">
+        <div class="col">
+          <div class="about-me-content">
+              <h2>Bloc Chat -  using Firebase to send and receive messages in real time.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-img-top">
+          <img src="assets/images/blocchat/main.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>WHAT IS IT?</h3>
+          <p>
+            This project was a part of the curriculum at Bloc in front-end web development.
+            Bloc Chat is an application built with AngularJS on the front-end, and Firebase for real-time data management. 
+          </p>
+          <p>
+            Parts of the main design, especially the chat box and room list were modeled with the Slack desktop application as a
+            inspiration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>UNDER THE HOOD AND NOTABLE</h3>
+          <img src="assets/images/blocchat/username.png" class="img-fluid">
+          <p>
+            When the application page is loaded, ng-cookie service is invoked to check whether or not the requesting user has a cookie stored
+            with the appropriate value corresponding to the username used in the chat rooms. If one is not found, the user is prompted to 
+            create one with a modal. This modal cannot be closed by the user and the background of the application becomes static - this
+            is another way to prevent the user from accessing the application without a username.
+          </p>
+          <br />
+          <img src="assets/images/blocchat/roomcreate.png" class="img-fluid">
+          <p>
+            After entering a username, or returning from a previous visit, the user can either enter an already available room or create
+            one by clicking the Create New Room button at the bottom of the room list pane. When this button is clicked, the user is
+            presented with another modal that allows the entering of a room name and clicking ok or canceling the operation altogether
+            by clicking cancel. 
+          </p>
+          <p>
+            As seen in the figure above, the user cannot create a room that already exists. The application queries the list of rooms
+            from the Firebase database and if the entered name exists, the submit function is not called and an error message is displayed.
+            Because the list available rooms is queried from Firebase directly, it is updated in real-time and any added room name is immediately 
+            available to check against.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>SIMPLY ANGULAR</h3>
+          <img src="assets/images/blocchat/main.png" class="img-fluid">
+          <p>
+            AngularJS expressions allow for easy updating of UI components. In the figure above, notice that the active room name
+            appears three times. The first one is in the Rooms pane on the right. The second is the active room title at the top of the
+            chat window, and the third is in the bottom of the Bloc Chat window in the create message text area.
+          </p>
+          <p>
+            When the user clicks on a room listed in the Rooms pane, the selected room is stored in an accessible variable, while
+            querying the message corresponding associated to the room. The chat window and compose message box uses an AngularJS 
+            expression to dynamically update with the proper room name. Using an expression is effective because it allows for real time
+            data binding that changes based on the where the user is focused.
+          </p>
+          <p>
+            It is worth noting that when there is no active room, the compose message box does not appear, and the chat window displays
+            a centered message prompting the user to either click on a room to get started chatting or to create a new room.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <div class="body-content">
+          <h3>THE TAKE AWAY</h3>
+          <p>
+            While other projects have demonstrated the power of AngularJS, creating Bloc Chat illustrated how the AngularFIre library
+            makes integrating Firebase into Angular projects an absolute treat.
+          </p>
+          <p>
+            It was important to follow the Firebase documentation, as it outlines the best practices for structuring the data
+            in your application. It was very eye opening working with a non-relational database. The data is loosely structured, yet
+            specific querying allows for very minimal data transfer, only downloading exactly what is needed to fulfill the users' request.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="scripts/parallax.js"></script>
+</body>
+</html>
